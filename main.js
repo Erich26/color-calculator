@@ -8,7 +8,7 @@ const purple = 'red, blue';
 const orange = 'red, yellow';
 const green = 'blue, yellow';
 
-if (choose.includes('red blue', 'red yellow', 'blue yellow')) {
+if (choose.includes('red blue') || ('red yellow') || ('blue yellow')) {
      if (choose === 'red blue') {
     console.log(redblue);
      }
@@ -18,12 +18,7 @@ if (choose.includes('red blue', 'red yellow', 'blue yellow')) {
     else if (choose === 'blue yellow') {
     console.log(blueyellow);
     }
-    else {
-        console.log('error')
-    }
-} 
-
-else if (choose.includes('purple', 'orange', 'green')) {
+    else if (choose.includes('purple') || ('orange') || ('green')) {
      if (choose === 'purple') {
      console.log(purple);
      }
@@ -34,15 +29,7 @@ else if (choose.includes('purple', 'orange', 'green')) {
      console.log(green);
      }
     else {
-        console.log('error')
+        console.log('Error, Self Destruct Imminent.');
     }
-
-}
-
-else {
-    console.log('Error, Self Destruct Imminent.')
-}
-
-
-
-
+}}
+    
