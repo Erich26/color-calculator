@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-const choose = prompt('Combine or Deconstruct?');
+const choose = prompt('Enter two colors with a space between to combine or one to deconstruct: ');
 const redblue = 'purple';
 const redyellow = 'orange';
 const blueyellow = 'green';
@@ -8,15 +8,14 @@ const purple = 'red, blue';
 const orange = 'red, yellow';
 const green = 'blue, yellow';
 
-if (choose === 'combine' && 'Combine') {
-    const two = prompt('Enter two colors with a space inbetween: ');
-     if (two === 'red blue') {
+if (choose.includes('red blue', 'red yellow', 'blue yellow')) {
+     if (choose === 'red blue') {
     console.log(redblue);
      }
-    else if (two === 'red yellow') {
+    else if (choose === 'red yellow') {
     console.log(redyellow);
      }
-    else if (two === 'blue yellow') {
+    else if (choose === 'blue yellow') {
     console.log(blueyellow);
     }
     else {
@@ -24,15 +23,14 @@ if (choose === 'combine' && 'Combine') {
     }
 } 
 
-else if (choose === 'deconstruct' && 'Deconstruct') {
-    const one = prompt('Enter one color: ');
-     if (one === 'purple') {
+else if (choose.includes('purple', 'orange', 'green')) {
+     if (choose === 'purple') {
      console.log(purple);
      }
-    else if (one === 'orange') {
+    else if (choose === 'orange') {
      console.log(orange);
      }
-    else if (one === 'green') {
+    else if (choose === 'green') {
      console.log(green);
      }
     else {
